@@ -64,10 +64,10 @@ a{color:inherit}
 .cards{padding:76px 0}
 .cards h2{font-size:clamp(1.9rem,4vw,3rem);margin-bottom:8px}
 .cards .sub{color:var(--ash);margin-bottom:34px}
-.strip{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
-.strip img{border:3px solid var(--ink);width:100%;aspect-ratio:2/3;object-fit:cover}
-.majors-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:18px}
-.majors-grid img{border:3px solid var(--ink);width:100%;aspect-ratio:2/3;object-fit:cover}
+.strip{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;align-items:start}
+.strip img{border:3px solid var(--ink);width:100%;height:auto;aspect-ratio:3/5;object-fit:contain;background:var(--ink)}
+.majors-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:18px;align-items:start}
+.majors-grid img{border:3px solid var(--ink);width:100%;height:auto;aspect-ratio:3/5;object-fit:contain;background:var(--ink)}
 .majors-grid img:hover{outline:3px solid var(--crimson);outline-offset:2px}
 
 .video{padding:76px 0;background:var(--ink);color:var(--paper)}
