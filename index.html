@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crimson &amp; Chaos Tarot — Classic Structure. Savage Style.</title>
+<meta name="description" content="A 78-card tarot deck in the Trash Polka style. Metallic red Pantone ink, black-core stock, magnetic box, full-color guidebook. Coming to Kickstarter.">
+<meta property="og:title" content="Crimson &amp; Chaos Tarot">
+<meta property="og:description" content="Classic structure. Savage style. A 78-card tarot deck coming to Kickstarter.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/box-front.jpg">
+<link rel="icon" href="assets/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0d0d0d; --paper:#ffffff; --crimson:#c1121f; --deep:#7a0c14;
+  --ash:#585858; --bone:#f2efe9;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);
+  font-family:'Barlow',system-ui,-apple-system,'Segoe UI',sans-serif;
+  font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.display{font-family:'Anton',Impact,'Arial Narrow Bold',sans-serif;
+  font-weight:400;text-transform:uppercase;line-height:.92;letter-spacing:.01em}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 28px}
+
+.hero{position:relative;background:var(--ink);color:var(--paper);overflow:hidden;
+  padding:72px 0 0}
+.hero::before{content:"";position:absolute;top:-18%;left:-12%;width:58%;height:150%;
+  background:var(--crimson);transform:rotate(-14deg);opacity:.92}
+.hero::after{content:"";position:absolute;bottom:-30%;right:-16%;width:46%;height:120%;
+  background:var(--deep);transform:rotate(-14deg)}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;
+  gap:52px;align-items:end;padding-bottom:0}
+.hero h1{font-size:clamp(3.6rem,8.6vw,7.4rem);color:var(--paper)}
+.hero h1 .amp{color:var(--ink);-webkit-text-stroke:2px var(--paper)}
+.kicker{font-family:'Anton',sans-serif;font-size:clamp(1rem,2vw,1.35rem);
+  letter-spacing:.22em;color:var(--paper);text-transform:uppercase;margin-bottom:22px}
+.hero p.lede{font-size:1.18rem;max-width:34ch;margin:26px 0 30px;color:#e9e4de}
+.hero-box{align-self:end;margin-bottom:-4px}
+.hero-box img{border:5px solid var(--paper);width:100%}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:64px}
+.btn{display:inline-block;font-family:'Anton',sans-serif;text-transform:uppercase;
+  letter-spacing:.06em;font-size:1.05rem;padding:17px 30px;text-decoration:none;
+  border:3px solid var(--paper);transition:background .15s,color .15s}
+.btn-solid{background:var(--paper);color:var(--ink)}
+.btn-solid:hover{background:var(--crimson);border-color:var(--crimson);color:var(--paper)}
+.btn-ghost{background:transparent;color:var(--paper)}
+.btn-ghost:hover{background:var(--paper);color:var(--ink)}
+.btn:focus-visible{outline:4px solid var(--crimson);outline-offset:3px}
+
+.slab{background:var(--paper);padding:88px 0 20px}
+.slab h2{font-size:clamp(2.1rem,5vw,3.6rem);max-width:19ch}
+.slab .rule{width:110px;height:9px;background:var(--crimson);margin:26px 0 24px}
+.two-col{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:start}
+.two-col p{margin-bottom:16px;color:var(--ash);max-width:62ch}
+.two-col p strong{color:var(--ink)}
+
+.cards{padding:76px 0}
+.cards h2{font-size:clamp(1.9rem,4vw,3rem);margin-bottom:8px}
+.cards .sub{color:var(--ash);margin-bottom:34px}
+.strip{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.strip img{border:3px solid var(--ink);width:100%;aspect-ratio:2/3;object-fit:cover}
+.majors-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:18px}
+.majors-grid img{border:3px solid var(--ink);width:100%;aspect-ratio:2/3;object-fit:cover}
+.majors-grid img:hover{outline:3px solid var(--crimson);outline-offset:2px}
+
+.video{padding:76px 0;background:var(--ink);color:var(--paper)}
+.video h2{font-size:clamp(1.9rem,4vw,3rem);margin-bottom:8px}
+.video .sub{color:#b5b0a9;margin-bottom:28px}
+.video-wrap{border:4px solid var(--crimson);background:#000}
+.video-wrap video{width:100%;display:block;max-height:72vh}
+
+.spec{background:var(--ink);color:var(--paper);padding:82px 0}
+.spec h2{font-size:clamp(1.9rem,4vw,3rem);margin-bottom:34px}
+.spec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:4px solid var(--crimson)}
+.spec-item{padding:26px 26px 26px 0;border-bottom:1px solid #2b2b2b}
+.spec-item dt{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:1.15rem;
+  letter-spacing:.03em;margin-bottom:6px}
+.spec-item dd{color:#b5b0a9;font-size:.98rem}
+.spec-note{margin-top:30px;font-size:1.05rem;color:var(--paper)}
+.spec-note b{color:var(--crimson)}
+.spec-visual{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:36px}
+.spec-visual img{border:3px solid #2b2b2b;width:100%}
+
+.spread{padding:82px 0;background:var(--bone)}
+.spread-inner{display:grid;grid-template-columns:.9fr 1.1fr;gap:54px;align-items:center}
+.spread h2{font-size:clamp(1.9rem,4vw,3rem);margin-bottom:18px}
+.spread p{color:var(--ash);margin-bottom:14px;max-width:56ch}
+.spread ol{list-style:none;counter-reset:pos;margin-top:22px}
+.spread ol li{counter-increment:pos;padding:9px 0 9px 46px;position:relative;
+  border-bottom:1px solid #ddd8d0;font-size:.98rem;color:var(--ash)}
+.spread ol li::before{content:counter(pos);position:absolute;left:0;top:9px;
+  width:30px;height:30px;background:var(--crimson);color:#fff;
+  font-family:'Anton',sans-serif;font-size:1rem;display:grid;place-items:center}
+.spread ol li b{color:var(--ink)}
+
+.signup{background:var(--crimson);color:#fff;padding:86px 0}
+.signup-inner{max-width:680px}
+.signup h2{font-size:clamp(2rem,4.6vw,3.2rem);margin-bottom:14px}
+.signup p{font-size:1.1rem;margin-bottom:28px;color:#ffe9ea}
+#email-embed form{display:flex;flex-wrap:wrap;gap:12px}
+#email-embed input[type=email]{flex:1 1 300px;padding:17px 18px;border:3px solid #fff;
+  background:#fff;color:var(--ink);font-family:'Barlow',sans-serif;font-size:1.02rem}
+#email-embed input[type=email]:focus-visible{outline:4px solid var(--ink);outline-offset:2px}
+#email-embed button{font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:.06em;
+  font-size:1.05rem;padding:17px 32px;border:3px solid var(--ink);background:var(--ink);
+  color:#fff;cursor:pointer}
+#email-embed button:hover{background:#fff;color:var(--ink)}
+.fineprint{margin-top:18px;font-size:.88rem;color:#ffd9db}
+
+footer{background:var(--ink);color:#8e8880;padding:44px 0;font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer b{color:var(--paper);font-family:'Anton',sans-serif;letter-spacing:.04em;
+  text-transform:uppercase;font-weight:400}
+
+@media (max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:34px}
+  .hero-box{max-width:340px}
+  .two-col,.spread-inner,.spec-visual{grid-template-columns:1fr;gap:32px}
+  .spec-grid{grid-template-columns:1fr}
+  .strip,.majors-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <p class="kicker">Coming to Kickstarter</p>
+      <h1>Crimson<br><span class="amp">&amp;</span> Chaos</h1>
+      <p class="lede">Tarot has been beautiful for six hundred years. It's rarely been dangerous.</p>
+      <div class="cta-row">
+        <a class="btn btn-solid" href="#notify">Get notified at launch</a>
+        <a class="btn btn-ghost" href="KICKSTARTER_PRELAUNCH_URL">Follow on Kickstarter</a>
+      </div>
+    </div>
+    <div class="hero-box">
+      <img src="assets/box-front.jpg" alt="Crimson &amp; Chaos Tarot box art">
+    </div>
+  </div>
+</header>
+
+<section class="slab">
+  <div class="wrap">
+    <h2>Classic structure.<br>Savage style.</h2>
+    <div class="rule"></div>
+    <div class="two-col">
+      <div>
+        <p><strong>Crimson &amp; Chaos</strong> is a complete 78-card tarot deck built on the traditional Rider–Waite–Smith system and rendered in trash polka — the raw, collision-course art style born in German tattoo studios.</p>
+        <p>Photorealism crashes into graphic abstraction. Only three colors survive: black, bone-white, and a red that does all the talking.</p>
+      </div>
+      <div>
+        <p>Trash polka is controlled destruction — hyper-real imagery fused with bold red brushstrokes, dripping ink, geometric shrapnel, and splatter that feels less like decoration and more like evidence.</p>
+        <p><strong>In Crimson &amp; Chaos, that becomes a visual language all its own.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cards" id="majors">
+  <div class="wrap">
+    <h2>The Major Arcana</h2>
+    <p class="sub">All 22 Majors — print-ready. The full deck follows.</p>
+    <div class="strip">
+      <img src="assets/fool.jpg" alt="The Fool">
+      <img src="assets/priestess.jpg" alt="The High Priestess">
+      <img src="assets/tower.jpg" alt="The Tower">
+      <img src="assets/death.jpg" alt="Death">
+      <img src="assets/moon.jpg" alt="The Moon">
+      <img src="assets/sun.jpg" alt="The Sun">
+    </div>
+    <div class="majors-grid" aria-label="Full Major Arcana gallery">
+      <img src="assets/magician.jpg" alt="The Magician">
+      <img src="assets/empress.jpg" alt="The Empress">
+      <img src="assets/emperor.jpg" alt="The Emperor">
+      <img src="assets/hierophant.jpg" alt="The Hierophant">
+      <img src="assets/lovers.jpg" alt="The Lovers">
+      <img src="assets/chariot.jpg" alt="The Chariot">
+      <img src="assets/strength.jpg" alt="Strength">
+      <img src="assets/hermit.jpg" alt="The Hermit">
+      <img src="assets/wheel.jpg" alt="Wheel of Fortune">
+      <img src="assets/justice.jpg" alt="Justice">
+      <img src="assets/hanged.jpg" alt="The Hanged Man">
+      <img src="assets/temperance.jpg" alt="Temperance">
+      <img src="assets/devil.jpg" alt="The Devil">
+      <img src="assets/star.jpg" alt="The Star">
+      <img src="assets/judgement.jpg" alt="Judgement">
+      <img src="assets/world.jpg" alt="The World">
+    </div>
+  </div>
+</section>
+
+<section class="video" id="video">
+  <div class="wrap">
+    <h2>Campaign video</h2>
+    <p class="sub">Classic Structure. Savage Style.</p>
+    <div class="video-wrap">
+      <video controls playsinline preload="metadata" poster="assets/box-front.jpg">
+        <source src="assets/promo.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
+    </div>
+  </div>
+</section>
+
+<section class="spec" id="box">
+  <div class="wrap">
+    <h2>What's in the box</h2>
+    <dl class="spec-grid">
+      <div class="spec-item"><dt>78 cards</dt><dd>330gsm black-core stock — fully opaque, professional weight</dd></div>
+      <div class="spec-item"><dt>Metallic red ink</dt><dd>Pantone metallic red on every card face</dd></div>
+      <div class="spec-item"><dt>Soft-touch matte</dt><dd>Velvety lamination that protects against scratching</dd></div>
+      <div class="spec-item"><dt>Magnetic box</dt><dd>Rigid magnetic-closure box built to survive a shelf life</dd></div>
+      <div class="spec-item"><dt>Full-color guidebook</dt><dd>Every card, upright and reversed, plus spreads for this deck</dd></div>
+      <div class="spec-item"><dt>Stretch goals</dt><dd>Painted edges, foil stamping and more — unlocked for every deck</dd></div>
+    </dl>
+    <p class="spec-note">The guidebook is in <b>every single deck</b>. Not a tier. Not an add-on.</p>
+    <div class="spec-visual">
+      <img src="assets/box-front.jpg" alt="Box art">
+      <img src="assets/guidebook-cover.jpg" alt="Guidebook cover">
+    </div>
+  </div>
+</section>
+
+<section class="spread">
+  <div class="wrap spread-inner">
+    <div>
+      <img src="assets/card-back.jpg" alt="Crimson &amp; Chaos card back" style="border:4px solid #0d0d0d">
+    </div>
+    <div>
+      <h2>The Wreckage Spread</h2>
+      <p>A three-card pull for when the old map is useless and you need to read the wreckage instead.</p>
+      <ol>
+        <li><b>The Break</b> — what fell apart</li>
+        <li><b>The Cost</b> — what it took from you</li>
+        <li><b>The Rebuild</b> — what you make from the scraps</li>
+      </ol>
+      <p style="margin-top:20px">Chaos first. Meaning pulled from it.</p>
+    </div>
+  </div>
+</section>
+
+<section class="signup" id="notify">
+  <div class="wrap signup-inner">
+    <h2>Be there on day one</h2>
+    <p>Backers who arrive in the first 48 hours decide whether a campaign lives. Join the list and you'll know the moment we go live — plus a free set of Crimson &amp; Chaos phone wallpapers.</p>
+
+    <!-- EMAIL SIGNUP: replace with Kit / MailerLite embed when ready -->
+    <div id="email-embed">
+      <form action="REPLACE_WITH_YOUR_FORM_ACTION_URL" method="post">
+        <label for="em" style="position:absolute;left:-9999px">Email address</label>
+        <input id="em" type="email" name="email_address" placeholder="your@email.com" required>
+        <button type="submit">Send me the launch</button>
+      </form>
+    </div>
+
+    <p class="fineprint">Campaign updates only. No spam, and you can leave whenever you like.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span><b>Crimson &amp; Chaos Tarot</b> — an independent deck by Iris, Colorado</span>
+    <span>Trash Polka was pioneered by tattoo artists Simone Pfaff &amp; Volko Merschky.</span>
+  </div>
+</footer>
+
+</body>
+</html>
