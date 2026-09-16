@@ -106,13 +106,15 @@ a{color:inherit}
 .signup p{font-size:1.1rem;margin-bottom:28px;color:#ffe9ea}
 #email-embed{max-width:560px}
 #email-embed .formkit-form{max-width:100%!important;border:3px solid #fff!important;background:transparent!important}
-#email-embed .formkit-header h2{color:#fff!important;font-family:'Anton',sans-serif!important;text-transform:uppercase}
-#email-embed .formkit-subheader{color:#ffe9ea!important}
+#email-embed .formkit-header,#email-embed .formkit-subheader{display:none!important}
 #email-embed .formkit-guarantee{color:#ffd9db!important}
-#email-embed .formkit-input{border:3px solid #fff!important;border-radius:0!important;padding:16px 18px!important;font-size:1.02rem!important}
-#email-embed .formkit-submit{background:#0d0d0d!important;border-radius:0!important;font-family:'Anton',sans-serif!important;text-transform:uppercase!important;letter-spacing:.06em!important}
-#email-embed .formkit-submit:hover{background:#fff!important;color:#0d0d0d!important}
-#email-embed .formkit-submit:hover span{color:#0d0d0d!important}
+#email-embed .formkit-fields{display:flex!important;flex-direction:column!important;flex-wrap:nowrap!important;margin:0!important}
+#email-embed .formkit-field,#email-embed .formkit-submit{width:100%!important;max-width:100%!important;flex:1 0 100%!important;margin:0 0 12px 0!important}
+#email-embed .formkit-input{border:3px solid #fff!important;border-radius:0!important;padding:16px 18px!important;font-size:1.02rem!important;width:100%!important;color:#0d0d0d!important;background:#fff!important}
+#email-embed .formkit-submit{background:#fff!important;color:#0d0d0d!important;border:3px solid #fff!important;border-radius:0!important;font-family:'Anton',sans-serif!important;text-transform:uppercase!important;letter-spacing:.06em!important;cursor:pointer!important}
+#email-embed .formkit-submit span{color:#0d0d0d!important;background:transparent!important;padding:16px 18px!important}
+#email-embed .formkit-submit:hover{background:#0d0d0d!important;color:#fff!important;border-color:#0d0d0d!important}
+#email-embed .formkit-submit:hover span{color:#fff!important;background:transparent!important}
 .fineprint{margin-top:18px;font-size:.88rem;color:#ffd9db}
 
 footer{background:var(--ink);color:#8e8880;padding:44px 0;font-size:.92rem}
@@ -250,7 +252,7 @@ footer b{color:var(--paper);font-family:'Anton',sans-serif;letter-spacing:.04em;
       <form action="https://app.kit.com/forms/9925959/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="9925959" data-uid="d05df5dabf" data-format="inline" data-version="5" data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;message&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;&quot;},&quot;analytics&quot;:{&quot;google&quot;:null,&quot;fathom&quot;:null,&quot;facebook&quot;:null,&quot;segment&quot;:null,&quot;pinterest&quot;:null,&quot;sparkloop&quot;:null,&quot;googletagmanager&quot;:null},&quot;modal&quot;:{&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;powered_by&quot;:{&quot;show&quot;:true,&quot;url&quot;:&quot;https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic&quot;},&quot;recaptcha&quot;:{&quot;enabled&quot;:false},&quot;return_visitor&quot;:{&quot;action&quot;:&quot;show&quot;,&quot;custom_content&quot;:&quot;&quot;},&quot;slide_in&quot;:{&quot;display_in&quot;:&quot;bottom_right&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;sticky_bar&quot;:{&quot;display_in&quot;:&quot;top&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15}},&quot;version&quot;:&quot;5&quot;}" min-width="400 500 600 700 800">
         <div data-style="minimal">
           <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
-          <div data-element="fields" data-stacked="false" class="seva-fields formkit-fields">
+          <div data-element="fields" data-stacked="true" class="seva-fields formkit-fields">
             <div class="formkit-field">
               <input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="your@email.com" required type="email">
             </div>
