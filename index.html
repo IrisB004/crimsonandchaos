@@ -245,9 +245,10 @@ footer b{color:var(--paper);font-family:'Anton',sans-serif;letter-spacing:.04em;
 
     <!-- EMAIL SIGNUP: replace with Kit / MailerLite embed when ready -->
     <div id="email-embed">
-      <form action="REPLACE_WITH_YOUR_FORM_ACTION_URL" method="post">
+      <form action="https://formspree.io/f/mgavwgwk" method="POST">
         <label for="em" style="position:absolute;left:-9999px">Email address</label>
-        <input id="em" type="email" name="email_address" placeholder="your@email.com" required>
+        <input id="em" type="email" name="email" placeholder="your@email.com" required>
+        <input type="hidden" name="_subject" value="Crimson & Chaos — new launch signup">
         <button type="submit">Send me the launch</button>
       </form>
     </div>
