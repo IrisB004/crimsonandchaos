@@ -120,9 +120,12 @@ a{color:inherit}
 .fineprint{margin-top:18px;font-size:.88rem;color:#ffd9db}
 
 footer{background:var(--ink);color:#8e8880;padding:44px 0;font-size:.92rem}
-footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
 footer b{color:var(--paper);font-family:'Anton',sans-serif;letter-spacing:.04em;
   text-transform:uppercase;font-weight:400}
+footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid #8e8880}
+footer a:hover{color:var(--crimson);border-bottom-color:var(--crimson)}
+.footer-links{display:flex;gap:18px;flex-wrap:wrap}
 
 @media (max-width:900px){
   .hero-inner{grid-template-columns:1fr;gap:34px}
@@ -145,6 +148,7 @@ footer b{color:var(--paper);font-family:'Anton',sans-serif;letter-spacing:.04em;
       <div class="cta-row">
         <a class="btn btn-solid" href="https://crimson-chaos-tarot.kit.com/d05df5dabf" target="_blank" rel="noopener">Get notified at launch</a>
         <a class="btn btn-ghost" href="https://www.kickstarter.com/profile/irisb" target="_blank" rel="noopener">Follow on Kickstarter</a>
+        <a class="btn btn-ghost" href="https://www.facebook.com/crimsonandchaostarot" target="_blank" rel="noopener">Follow on Facebook</a>
       </div>
     </div>
     <div class="hero-box">
@@ -274,7 +278,7 @@ footer b{color:var(--paper);font-family:'Anton',sans-serif;letter-spacing:.04em;
 
 <footer>
   <div class="wrap">
-    <span><b>Crimson &amp; Chaos Tarot</b> — an independent deck by Iris, Colorado</span>
+    <span><b>Crimson &amp; Chaos Tarot</b> — an independent deck by Iris, Colorado · <a href="https://www.facebook.com/crimsonandchaostarot" target="_blank" rel="noopener">Facebook</a></span>
     <span>Trash Polka was pioneered by tattoo artists Simone Pfaff &amp; Volko Merschky.</span>
   </div>
 </footer>
