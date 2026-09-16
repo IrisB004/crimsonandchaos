@@ -40,7 +40,9 @@ a{color:inherit}
 .hero h1{font-size:clamp(3.6rem,8.6vw,7.4rem);color:var(--paper)}
 .hero h1 .amp{color:var(--ink);-webkit-text-stroke:2px var(--paper)}
 .kicker{font-family:'Anton',sans-serif;font-size:clamp(1rem,2vw,1.35rem);
-  letter-spacing:.22em;color:var(--paper);text-transform:uppercase;margin-bottom:22px}
+  letter-spacing:.22em;color:var(--paper);text-transform:uppercase;margin-bottom:22px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.ks-mark{height:26px;width:auto;display:block}
 .hero p.lede{font-size:1.18rem;max-width:34ch;margin:26px 0 30px;color:#e9e4de}
 .hero-box{align-self:end;margin-bottom:-4px}
 .hero-box img{border:5px solid var(--paper);width:100%}
@@ -137,7 +139,7 @@ footer b{color:var(--paper);font-family:'Anton',sans-serif;letter-spacing:.04em;
 <header class="hero">
   <div class="wrap hero-inner">
     <div>
-      <p class="kicker">Coming to Kickstarter</p>
+      <p class="kicker">Coming to <img class="ks-mark" src="assets/kickstarter-logo-white.png" alt="Kickstarter"></p>
       <h1>Crimson<br><span class="amp">&amp;</span> Chaos</h1>
       <p class="lede">Tarot has been beautiful for six hundred years. It's rarely been dangerous.</p>
       <div class="cta-row">
